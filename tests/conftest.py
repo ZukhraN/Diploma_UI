@@ -1,13 +1,11 @@
-import pytest
 import os
-
-from allure_commons._allure import attach
+import pytest
 from selene import browser
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
-#from test_frameworks.utils import allure_attach
+from test_frameworks.utils import attach
 
-@pytest.fixture(scope='function')
+@pytest.fixture(scope='function', autouse=True)
 def setup_browser(request):
     options = Options()
     selenoid_capabilities = {
@@ -19,16 +17,17 @@ def setup_browser(request):
         }
     }
     options.capabilities.update(selenoid_capabilities)
-    login = os.getenv('LOGIN')
-    password = os.getenv('PASSWORD')
-    browser_url = os.getenv('DEFAULT_BROWSER_URL')
+
+    login = os.getenv('login')
+    password = os.getenv('password')
 
     driver = webdriver.Remote(
-        command_executor=f"https://{login}:{password}@{browser_url}",
+        command_executor=f"https://{login}:{password}@selenoid.autotests.cloud/wd/hub",
         options=options
     )
+
     browser.config.driver = driver
-    browser.config.base_url = "https://hdrezka.ag/"
+    browser.config.base_url = 'https://hdrezka.ag/'
     browser.config.window_width = 1920
     browser.config.window_height = 1080
 
@@ -40,3 +39,7 @@ def setup_browser(request):
     attach.add_video(browser)
 
     browser.quit()
+
+@pytest.fixture(scope='function')
+def open_main_page():
+    browser.open('')

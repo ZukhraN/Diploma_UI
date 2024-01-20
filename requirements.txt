@@ -4,3 +4,4 @@ selene>=2.0.0b4
 requests==2.31.0
 selenium~=4.16.0
 python-dotenv==0.20.0
+selenium==4.16.0
