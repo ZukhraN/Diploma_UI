@@ -2,7 +2,7 @@ import allure
 from selene import browser, have, be
 from allure import step
 
-class MainPage:
+class Main:
     def check_main_page(self):
         with step('Фильмы - отображается в верхнем меню'):
             browser.element('#topnav-menu').should(have.text('Фильмы'))
@@ -31,4 +31,4 @@ class MainPage:
         with step('Поиск заголовка Быстрая регистрация'):
             browser.element('#register-popup').should(have.text('БЫСТРАЯ РЕГИСТРАЦИЯ'))
 
-main_page = MainPage()
+main_page = Main()

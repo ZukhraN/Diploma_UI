@@ -1,6 +1,7 @@
 import allure
 from test_frameworks.pages.main_page_ui import main_page
 
+
 @allure.story('Open main page')
 @allure.title('Main page should be shown')
 @allure.feature('Main page')
@@ -16,6 +17,7 @@ def test_check_theme(open_main_page):
 
     # THEN
     main_page.check_theme()
+
 
 @allure.story('Open announce page')
 @allure.title('Announce page should be shown')

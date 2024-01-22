@@ -1,7 +1,7 @@
 import allure
 from test_frameworks.pages.search_page import search_page
 
-@allure.title('Search page should be shown')
+@allure.title('Search page should be shown correct results')
 @allure.feature('Search page')
 @allure.label('microservice', 'Search page')
 @allure.label('owner', 'allure8')
@@ -15,7 +15,7 @@ def test_search_movie(open_main_page):
     # THEN
     search_page.check_result_search()
 
-@allure.title('Search page should be shown')
+@allure.title('Search page should be shown no results')
 @allure.feature('Search page')
 @allure.label('microservice', 'Search page')
 @allure.label('owner', 'allure8')

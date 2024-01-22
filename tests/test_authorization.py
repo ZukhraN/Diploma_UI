@@ -14,7 +14,7 @@ wrong_password = os.getenv("wrong_password")
 @allure.tag('smoke', 'regress', 'web', 'critical')
 @allure.severity('critical')
 @allure.label('layer', 'web')
-def test_registration_negotiv(open_main_page):
+def test_failed_registration(open_main_page):
     # WHEN
     authorization_page.find_register()
     authorization_page.check_speed_register()
@@ -31,7 +31,7 @@ def test_registration_negotiv(open_main_page):
 @allure.tag('smoke', 'regress', 'web', 'critical')
 @allure.severity('critical')
 @allure.label('layer', 'web')
-def test_authorization_pozotiv(open_main_page):
+def test_successful_authorization(open_main_page):
      # WHEN
     authorization_page.find_login()
     authorization_page.find_label_login()
@@ -42,14 +42,14 @@ def test_authorization_pozotiv(open_main_page):
     authorization_page.check_authorization()
 
 @allure.story('Open authorization page')
-@allure.title('Authorization page should be shown')
+@allure.title('Authorization page should be shown and failed')
 @allure.feature('Authorization page')
 @allure.label('microservice', 'Authorization page')
 @allure.label('owner', 'allure8')
 @allure.tag('smoke', 'regress', 'web', 'critical')
 @allure.severity('critical')
 @allure.label('layer', 'web')
-def test_authorization_negotiv(open_main_page):
+def test_failed_authorization(open_main_page):
     # WHEN
     authorization_page.find_login()
     authorization_page.find_label_login()

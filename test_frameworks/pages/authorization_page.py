@@ -1,7 +1,7 @@
 from selene import browser, have, be
 from allure import step
 
-class AuthorizationPage:
+class Authorization:
     def find_register(self):
         with step('Поиск регистрации на главной странице'):
             browser.element('.b-tophead__register').should(have.text('РЕГИСТРАЦИЯ')).click()
@@ -50,4 +50,4 @@ class AuthorizationPage:
         with step('Проверка авторизации под своей учеткой'):
             browser.element('#login-popup-errors').should(have.text('Введен неверный логин или пароль.'))
 
-authorization_page = AuthorizationPage()
+authorization_page = Authorization()
