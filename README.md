@@ -20,7 +20,7 @@
 
 ### Используемый стэк
 
-<img title="Python" src="./resources/icons/python.png" height="40" width="40"/> <img title="Pytest" src="./resources/icons/pytest.png" height="40" width="40"/> <img title="Pycharm" src="./resources/icons/pycharm.png" height="40" width="40"/> <img title="Jenkins" src="./resources/icons/jenkins.png" height="40" width="40"/> <img title="GitHub" src="./resources/icons/github.png" height="40" width="40"/> <img title="Allure Report" src="./resources/icons/allure_report.png" height="40" width="40"/> <img title="Allure TestOps" src="./resources/icons/allureTestOps.png" height="40" width="40"/><img title="Telegram" src="./resources/icons/telegram.png" height="40" width="40"/> 
+<img title="Python" src="./resources/icons/python.png" height="40" width="40"/> <img title="Pytest" src="./resources/icons/pytest.png" height="40" width="40"/> <img title="Pycharm" src="./resources/icons/pycharm.png" height="40" width="40"/> <img title="Jenkins" src="./resources/icons/jenkins.png" height="40" width="40"/> <img title="GitHub" src="./resources/icons/github.png" height="40" width="40"/> <img title="Allure Report" src="./resources/icons/allure_report.png" height="40" width="40"/> <img title="Allure TestOps" src="./resources/icons/allureTestOps.png" height="40" width="40"/>
 
 ----
 
@@ -34,7 +34,7 @@
 
 #### Шаги для запуска автотестов через Jenkins
 
-1. Открыть страницу <a target="_blank" href="https://https://github.com/ZukhraN/Diploma_UI">проекта</a>
+1. Открыть страницу <a target="_blank" href="https://jenkins.autotests.cloud/job/hdrezka_ui_project/">проекта</a>
 2. В меню выбрать пункт `Build with Parameters`
 3. Выбрать окружение в выпадающем списке
 4. Выбрать комментарий
@@ -51,7 +51,7 @@
 
 На странице с общими результатами мы можем увидеть общее количество тестов, сколько из них были успешными и сколько не успешными
 
-![Allure_report_example](./lresources/screenshots/allure_report_result.png)
+![Allure_report_example](./resources/screenshots/allure_report_result.png)
 
 #### Отчет прохождения теста
 
@@ -62,10 +62,14 @@
 
 ----
 
-### Оповещения в Telegram
+### Allure TestOps
 
-После выполнения автотестов, запущенных через Jenkins, также придёт уведомление в Telegram_bot об итогах тестирования
+Общий список всех кейсов, имеющихся в системе
 
-![allert_bot](./resources/screenshots/allert_bot.png)
+![Allure_suites_test](./resources/screenshots/allure_testops_results.png)
 
-----
+Пример dashboard с общими результатами тестирования
+
+![Allure_suites_test](./resources/screenshots/dashboard.png)
+
+
