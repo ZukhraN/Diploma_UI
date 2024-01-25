@@ -3,7 +3,7 @@ import pytest
 from selene import browser
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
-from test_frameworks.utils import attach
+from hdrezka_ui_project_tests.utils import attach
 
 @pytest.fixture(scope='function', autouse=True)
 def setup_browser(request):

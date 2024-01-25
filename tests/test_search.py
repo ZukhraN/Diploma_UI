@@ -1,5 +1,5 @@
 import allure
-from test_frameworks.pages.search_page import search_page
+from hdrezka_ui_project_tests.pages.search_page import search_page
 
 @allure.title('Search page should be shown correct results')
 @allure.feature('Search page')

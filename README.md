@@ -25,7 +25,7 @@
 ----
 
 ### Проект в Jenkins
-> <a target="_blank" href="https://github.com/ZukhraN/Diploma_UI">Ссылка на проект в Jenkins</a>
+> <a target="_blank" href="https://github.com/ZukhraN/hdrezka_ui_project">Ссылка на проект в Jenkins</a>
 
 Наш проект возможно запускать через Jenkins. Доступны следующие параметры сборки:
 * `environment` - параметр позволяет выбрать окружение, на котором будут запущены тесты

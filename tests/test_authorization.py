@@ -1,6 +1,6 @@
 import os
 import allure
-from test_frameworks.pages.authorization_page import authorization_page
+from hdrezka_ui_project_tests.pages.authorization_page import authorization_page
 
 login_auth = os.getenv("login_auth")
 password_auth = os.getenv("password_auth")

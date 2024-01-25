@@ -1,5 +1,5 @@
 import allure
-from test_frameworks.pages.main_page_ui import main_page
+from hdrezka_ui_project_tests.pages.main_page_ui import main_page
 
 
 @allure.story('Open main page')
