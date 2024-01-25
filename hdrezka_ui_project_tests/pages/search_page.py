@@ -2,6 +2,7 @@ import allure
 from selene import browser, have, be
 from allure import step
 
+
 class Search:
     def input_name_movie(self):
         with step('Ввод названия фильма в поле поиска'):
@@ -17,6 +18,8 @@ class Search:
 
     def check_incorrect_result_search(self):
         with step('Страница с результатми поиска'):
-            browser.element('.b-info__message').should(have.text('Нам не удалось ничего найти. Нет ли грамматических ошибок в запросе?'))
+            browser.element('.b-info__message').should(
+                have.text('Нам не удалось ничего найти. Нет ли грамматических ошибок в запросе?'))
+
 
 search_page = Search()

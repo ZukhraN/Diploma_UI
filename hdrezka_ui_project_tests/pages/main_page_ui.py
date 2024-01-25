@@ -2,6 +2,7 @@ import allure
 from selene import browser, have, be
 from allure import step
 
+
 class Main:
     def check_main_page(self):
         with step('Фильмы - отображается в верхнем меню'):
@@ -30,5 +31,6 @@ class Main:
     def check_speed_register(self):
         with step('Поиск заголовка Быстрая регистрация'):
             browser.element('#register-popup').should(have.text('БЫСТРАЯ РЕГИСТРАЦИЯ'))
+
 
 main_page = Main()

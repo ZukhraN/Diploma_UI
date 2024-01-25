@@ -72,4 +72,11 @@
 
 ![Allure_suites_test](./resources/screenshots/dashboard.png)
 
+____
+
+#### Видео прохождения теста
+
+![Allure_suites_test](./resources/screenshots/video.gif)
+
+
 

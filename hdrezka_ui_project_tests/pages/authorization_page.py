@@ -1,6 +1,7 @@
 from selene import browser, have, be
 from allure import step
 
+
 class Authorization:
     def find_register(self):
         with step('Поиск регистрации на главной странице'):
