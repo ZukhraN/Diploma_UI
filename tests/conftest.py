@@ -1,9 +1,11 @@
 import os
 import pytest
 from selene import browser
+from dotenv import load_dotenv
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from hdrezka_ui_project_tests.utils import attach
+
 
 @pytest.fixture(scope='function', autouse=True)
 def setup_browser(request):
@@ -40,6 +42,12 @@ def setup_browser(request):
 
     browser.quit()
 
+
 @pytest.fixture(scope='function')
 def open_main_page():
     browser.open('')
+
+
+@pytest.fixture(scope='session', autouse=True)
+def load_env():
+    load_dotenv()

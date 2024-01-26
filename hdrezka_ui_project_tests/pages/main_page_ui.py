@@ -33,4 +33,4 @@ class Main:
             browser.element('#register-popup').should(have.text('БЫСТРАЯ РЕГИСТРАЦИЯ'))
 
 
-main_page = Main()
+main = Main()

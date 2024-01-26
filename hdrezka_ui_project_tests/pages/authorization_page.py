@@ -51,4 +51,5 @@ class Authorization:
         with step('Проверка авторизации под своей учеткой'):
             browser.element('#login-popup-errors').should(have.text('Введен неверный логин или пароль.'))
 
-authorization_page = Authorization()
+
+authorization = Authorization()

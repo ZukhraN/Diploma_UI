@@ -1,5 +1,5 @@
 import allure
-from hdrezka_ui_project_tests.pages.main_page_ui import main_page
+from hdrezka_ui_project_tests.pages.main_page_ui import main
 
 
 @allure.story('Open main page')
@@ -12,11 +12,11 @@ from hdrezka_ui_project_tests.pages.main_page_ui import main_page
 @allure.label('layer', 'web')
 def test_check_theme(open_main_page):
     # WHEN
-    main_page.check_main_page()
-    main_page.find_change_theme()
+    main.check_main_page()
+    main.find_change_theme()
 
     # THEN
-    main_page.check_theme()
+    main.check_theme()
 
 
 @allure.story('Open announce page')
@@ -29,7 +29,7 @@ def test_check_theme(open_main_page):
 @allure.label('layer', 'web')
 def test_open_announce(open_main_page):
     # WHEN
-    main_page.click_announce()
+    main.click_announce()
 
     # THEN
-    main_page.find_announce()
+    main.find_announce()

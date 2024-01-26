@@ -22,4 +22,4 @@ class Search:
                 have.text('Нам не удалось ничего найти. Нет ли грамматических ошибок в запросе?'))
 
 
-search_page = Search()
+search = Search()

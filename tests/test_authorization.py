@@ -1,10 +1,13 @@
 import os
 import allure
-from hdrezka_ui_project_tests.pages.authorization_page import authorization_page
+from hdrezka_ui_project_tests.pages.authorization_page import authorization
+from dotenv import load_dotenv
 
+load_dotenv()
 login_auth = os.getenv("login_auth")
 password_auth = os.getenv("password_auth")
 wrong_password = os.getenv("wrong_password")
+
 
 @allure.story('Open registration page')
 @allure.title('Registration page should be shown')
@@ -16,12 +19,13 @@ wrong_password = os.getenv("wrong_password")
 @allure.label('layer', 'web')
 def test_failed_registration(open_main_page):
     # WHEN
-    authorization_page.find_register()
-    authorization_page.check_speed_register()
-    authorization_page.input_email(login_auth)
+    authorization.find_register()
+    authorization.check_speed_register()
+    authorization.input_email(login_auth)
 
     # THEN
-    authorization_page.check_information_email()
+    authorization.check_information_email()
+
 
 @allure.story('Open authorization page')
 @allure.title('Authorization page should be shown')
@@ -32,14 +36,15 @@ def test_failed_registration(open_main_page):
 @allure.severity('critical')
 @allure.label('layer', 'web')
 def test_successful_authorization(open_main_page):
-     # WHEN
-    authorization_page.find_login()
-    authorization_page.find_label_login()
-    authorization_page.input_login(login_auth)
-    authorization_page.input_password(password_auth)
+    # WHEN
+    authorization.find_login()
+    authorization.find_label_login()
+    authorization.input_login(login_auth)
+    authorization.input_password(password_auth)
 
     # THEN
-    authorization_page.check_authorization()
+    authorization.check_authorization()
+
 
 @allure.story('Open authorization page')
 @allure.title('Authorization page should be shown and failed')
@@ -51,10 +56,10 @@ def test_successful_authorization(open_main_page):
 @allure.label('layer', 'web')
 def test_failed_authorization(open_main_page):
     # WHEN
-    authorization_page.find_login()
-    authorization_page.find_label_login()
-    authorization_page.input_login(login_auth)
-    authorization_page.input_incorrect_password(wrong_password)
+    authorization.find_login()
+    authorization.find_label_login()
+    authorization.input_login(login_auth)
+    authorization.input_incorrect_password(wrong_password)
 
     # THEN
-    authorization_page.check_authorization_negotiv()
+    authorization.check_authorization_negotiv()

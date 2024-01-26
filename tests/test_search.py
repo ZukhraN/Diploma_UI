@@ -1,5 +1,6 @@
 import allure
-from hdrezka_ui_project_tests.pages.search_page import search_page
+from hdrezka_ui_project_tests.pages.search_page import search
+
 
 @allure.title('Search page should be shown correct results')
 @allure.feature('Search page')
@@ -10,10 +11,11 @@ from hdrezka_ui_project_tests.pages.search_page import search_page
 @allure.label('layer', 'web')
 def test_search_movie(open_main_page):
     # WHEN
-    search_page.input_name_movie()
+    search.input_name_movie()
 
     # THEN
-    search_page.check_result_search()
+    search.check_result_search()
+
 
 @allure.title('Search page should be shown no results')
 @allure.feature('Search page')
@@ -24,7 +26,7 @@ def test_search_movie(open_main_page):
 @allure.label('layer', 'web')
 def test_search_incorrect_movie(open_main_page):
     # WHEN
-    search_page.input_incorrect_movie()
+    search.input_incorrect_movie()
 
     # THEN
-    search_page.check_incorrect_result_search()
+    search.check_incorrect_result_search()
